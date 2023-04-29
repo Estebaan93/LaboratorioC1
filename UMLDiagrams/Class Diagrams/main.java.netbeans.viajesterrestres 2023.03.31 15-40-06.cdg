@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.netbeans.viajesterrestres">
+  <ClassDiagramComponents>
+    <Class name="Auto" package="netbeans.viajesterrestres" visibility="public" xPosition="9.0" yPosition="373.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Combustible" name="comb"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calcularCostoCombustible" returnType="float" visibility="public">
+          <Argument type="int" name="distancia"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Camion" package="netbeans.viajesterrestres" visibility="public" xPosition="270.0" yPosition="431.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Combustible" name="comb"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calcularCostoCombustible" returnType="float" visibility="public">
+          <Argument type="int" name="distancia"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Camioneta" package="netbeans.viajesterrestres" visibility="public" xPosition="540.0" yPosition="482.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Combustible" name="comb"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calcularCostoCombustible" returnType="float" visibility="public">
+          <Argument type="int" name="distancia"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Combustible" package="netbeans.viajesterrestres" visibility="public" xPosition="42.0" yPosition="61.0">
+      <Fields>
+        <Field name="tipoComb" type="String" visibility="private" isFinal="true"/>
+        <Field name="precio" type="int" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tipoComb"/>
+          <Argument type="int" name="precio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTipoComb" returnType="String" visibility="public"/>
+        <Method name="getPrecio" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Vehiculo" package="netbeans.viajesterrestres" visibility="public" isAbstract="true" xPosition="353.0" yPosition="34.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="protected"/>
+        <Field name="patente" type="String" visibility="protected"/>
+        <Field name="comb" type="Combustible" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Combustible" name="comb"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMarca" returnType="String" visibility="public"/>
+        <Method name="setMarca" returnType="void" visibility="public">
+          <Argument type="String" name="marca"/>
+        </Method>
+        <Method name="getPatente" returnType="String" visibility="public"/>
+        <Method name="setPatente" returnType="void" visibility="public">
+          <Argument type="String" name="patente"/>
+        </Method>
+        <Method name="getComb" returnType="Combustible" visibility="public"/>
+        <Method name="setComb" returnType="void" visibility="public">
+          <Argument type="Combustible" name="comb"/>
+        </Method>
+        <Method name="calcularCostoCombustible" returnType="float" visibility="public" isAbstract="true">
+          <Argument type="int" name="distancia"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Viaje" package="netbeans.viajesterrestres" visibility="public" xPosition="337.0" yPosition="-7.0">
+      <Fields>
+        <Field name="origen" type="String" visibility="private"/>
+        <Field name="kmOrigen" type="int" visibility="private"/>
+        <Field name="destino" type="String" visibility="private"/>
+        <Field name="kmDestino" type="int" visibility="private"/>
+        <Field name="vehiculo" type="Vehiculo" visibility="private"/>
+        <Field name="distancia" type="int" visibility="private"/>
+        <Field name="cantPeajes" type="int" visibility="private"/>
+        <Field name="costoPeajes" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="origen"/>
+          <Argument type="String" name="destino"/>
+          <Argument type="Vehiculo" name="vehiculo"/>
+          <Argument type="int" name="distancia"/>
+          <Argument type="int" name="cantPeajes"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="origen"/>
+          <Argument type="int" name="kmOrigen"/>
+          <Argument type="String" name="destino"/>
+          <Argument type="int" name="kmDestino"/>
+          <Argument type="Vehiculo" name="vehiculo"/>
+          <Argument type="int" name="cantPeajes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calculoDistancia" returnType="void" visibility="public"/>
+        <Method name="calculoCostoPeajes" returnType="void" visibility="public">
+          <Argument type="float" name="precioPeajes"/>
+        </Method>
+        <Method name="calculoCostoCombustible" returnType="void" visibility="public"/>
+        <Method name="costoTotal" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ViajesTerrestres" package="netbeans.viajesterrestres" visibility="public" xPosition="688.0" yPosition="448.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="comb" source="netbeans.viajesterrestres.Vehiculo" target="netbeans.viajesterrestres.Combustible" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="netbeans.viajesterrestres.Camioneta" target="netbeans.viajesterrestres.Vehiculo"/>
+    <HasRelation name="vehiculo" source="netbeans.viajesterrestres.Viaje" target="netbeans.viajesterrestres.Vehiculo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="netbeans.viajesterrestres.Auto" target="netbeans.viajesterrestres.Vehiculo"/>
+    <UseRelation source="netbeans.viajesterrestres.Vehiculo" target="netbeans.viajesterrestres.Combustible" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="netbeans.viajesterrestres.Camion" target="netbeans.viajesterrestres.Vehiculo"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

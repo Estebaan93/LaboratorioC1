@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio1">
+  <ClassDiagramComponents>
+    <Class name="Ejercicio1" package="Ejercicio1" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Razas" package="Ejercicio1" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="razas" type="ArrayList&lt;String&gt;" visibility="private"/>
+        <Field name="buscar" type="String" visibility="private"/>
+        <Field name="Encontrado" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getRazas" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="getBuscar" returnType="String" visibility="public"/>
+        <Method name="setBuscar" returnType="void" visibility="public">
+          <Argument type="String" name="buscar"/>
+        </Method>
+        <Method name="setRazas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String&gt;" name="razas"/>
+        </Method>
+        <Method name="guardarRaza" returnType="void" visibility="public">
+          <Argument type="String" name="raza"/>
+        </Method>
+        <Method name="mostrarRazas" returnType="void" visibility="public"/>
+        <Method name="itera" returnType="void" visibility="public"/>
+        <Method name="imprimirIterator" returnType="void" visibility="public"/>
+        <Method name="ordenar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

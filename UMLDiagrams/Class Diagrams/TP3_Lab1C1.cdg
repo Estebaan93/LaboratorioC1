@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="TP3_Lab1C1">
+  <ClassDiagramComponents>
+    <Class name="Persona" package="" visibility="protected" isAbstract="true" xPosition="319.0" yPosition="13.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="protected"/>
+        <Field name="dni" type="Int" visibility="protected"/>
+        <Field name="nacimiento" type="LocalDate" visibility="protected"/>
+        <Field name="domicilio" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularEdad" returnType="void" visibility="public"/>
+        <Method name="diasVividos" returnType="int" visibility="public"/>
+        <Method name="cobrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Jubilado" package="" visibility="public" xPosition="31.0" yPosition="150.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="cobrar" returnType="void" visibility="public"/>
+        <Method name="set" returnType="void" visibility="public"/>
+        <Method name="get" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Trabajador" package="" visibility="public" xPosition="559.0" yPosition="309.0">
+      <Fields>
+        <Field name="sueldo" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="cobrar" returnType="void" visibility="public"/>
+        <Method name="set" returnType="void" visibility="public"/>
+        <Method name="get" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Registro" package="" visibility="public" xPosition="298.0" yPosition="357.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="procesarDatos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Activo" package="" visibility="public" xPosition="631.0" yPosition="48.0">
+      <Methods>
+        <Method name="hacerAportes" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="Registro" target="Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Trabajador" target="Activo"/>
+    <IsRelation name="is" source="Jubilado" target="Persona"/>
+    <IsRelation name="is" source="Trabajador" target="Persona"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

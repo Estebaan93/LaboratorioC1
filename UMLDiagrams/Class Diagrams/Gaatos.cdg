@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Gaatos">
+  <ClassDiagramComponents>
+    <Class name="Mascotas" package="" visibility="public" isAbstract="true" xPosition="294.0" yPosition="25.0">
+      <Fields>
+        <Field name="apodo" type="String" visibility="private"/>
+        <Field name="sexo" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="hacerRuido" returnType="abstracto" visibility="public" isAbstract="true"/>
+        <Method name="sePuedeVacunar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gato" package="" visibility="public" xPosition="679.0" yPosition="36.0">
+      <Fields>
+        <Field name="tienePulgas" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="yaSeEmpulgo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Senora" package="" visibility="public" xPosition="737.0" yPosition="287.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="adoptarMascota" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="" visibility="public" xPosition="305.0" yPosition="268.0">
+      <Fields>
+        <Field name="enfermoMoquillos" type="boolean" visibility="private"/>
+        <Field name="garrapatas" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Lechuza" package="" visibility="public" xPosition="82.0" yPosition="268.0">
+      <Fields>
+        <Field name="calmada" type="boolean" visibility="private"/>
+        <Field name="ululato" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="enojarse" returnType="void" visibility="public"/>
+        <Method name="calmarse" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Gato" target="Senora"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

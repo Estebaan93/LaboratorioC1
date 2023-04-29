@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Tp1_Lab1_C1">
+  <ClassDiagramComponents>
+    <Class name="Hombre" package="" visibility="public" xPosition="3.0" yPosition="27.0">
+      <Fields>
+        <Field name="r1" type="Robot" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getR1" returnType="Robot" visibility="public"/>
+        <Method name="setR1" returnType="void" visibility="public">
+          <Argument type="Robot" name="r1"/>
+        </Method>
+        <Method name="jugarConRobot" returnType="void" visibility="public">
+          <Argument type="Robot" name="r1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Robot" package="" visibility="public" xPosition="424.0" yPosition="13.0">
+      <Fields>
+        <Field name="cantPasos" type="int" visibility="private"/>
+        <Field name="b1" type="Bateria" visibility="private"/>
+        <Field name="energia" type="int" visibility="private"/>
+        <Field name="vacio" type="boolean" visibility="private"/>
+        <Field name="lleno" type="boolean" visibility="private"/>
+        <Field name="powerOff" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCantPasos" returnType="int" visibility="public"/>
+        <Method name="setCantPasos" returnType="void" visibility="public">
+          <Argument type="int" name="cantPasos"/>
+        </Method>
+        <Method name="getBateria" returnType="Bateria" visibility="public"/>
+        <Method name="setBateria" returnType="void" visibility="public">
+          <Argument type="Bateria" name="b1"/>
+        </Method>
+        <Method name="getEnergia" returnType="int" visibility="public"/>
+        <Method name="setEnergia" returnType="void" visibility="public">
+          <Argument type="int" name="energia"/>
+        </Method>
+        <Method name="isVacio" returnType="boolean" visibility="public"/>
+        <Method name="setVacio" returnType="void" visibility="public">
+          <Argument type="boolean" name="vacio"/>
+        </Method>
+        <Method name="isLleno" returnType="boolean" visibility="public"/>
+        <Method name="setLleno" returnType="void" visibility="public">
+          <Argument type="boolean" name="lleno"/>
+        </Method>
+        <Method name="avanzar" returnType="void" visibility="public">
+          <Argument type="int" name="cantPasos"/>
+        </Method>
+        <Method name="retroceder" returnType="void" visibility="public">
+          <Argument type="int" name="cantPasos"/>
+        </Method>
+        <Method name="dormir" returnType="boolean" visibility="public"/>
+        <Method name="despertar" returnType="boolean" visibility="public"/>
+        <Method name="recargar" returnType="void" visibility="public"/>
+        <Method name="batLlena" returnType="boolean" visibility="public">
+          <Argument type="int" name="energia"/>
+        </Method>
+        <Method name="batVacio" returnType="boolean" visibility="public">
+          <Argument type="int" name="energia"/>
+        </Method>
+        <Method name="energiaTotal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Bateria" package="" visibility="public" xPosition="3.0" yPosition="264.0">
+      <Fields>
+        <Field name="Carga" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="carga"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCarga" returnType="int" visibility="public"/>
+        <Method name="setCarga" returnType="void" visibility="public">
+          <Argument type="int" name="carga"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="b1" source="Robot" target="Bateria" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Hombre" target="Robot" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="r1" source="Hombre" target="Robot" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Robot" target="Bateria" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

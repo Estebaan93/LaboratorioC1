@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="LaSenoraDeLosGatos">
+  <ClassDiagramComponents>
+    <Class name="Gato" package="LaSenoraDeLosGatos" visibility="public" xPosition="7.0" yPosition="3.0">
+      <Fields>
+        <Field name="tienePulgas" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="tienePulgas"/>
+          <Argument type="String" name="apodo"/>
+          <Argument type="String" name="sexo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isTienePulgas" returnType="boolean" visibility="public"/>
+        <Method name="setTienePulgas" returnType="void" visibility="public">
+          <Argument type="boolean" name="tienePulgas"/>
+        </Method>
+        <Method name="hacerRuido" returnType="void" visibility="public"/>
+        <Method name="sePuedeVacunar" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Lechuza" package="LaSenoraDeLosGatos" visibility="public" xPosition="7.0" yPosition="217.0">
+      <Fields>
+        <Field name="calmada" type="boolean" visibility="private"/>
+        <Field name="ululato" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="calmada"/>
+          <Argument type="String" name="apodo"/>
+          <Argument type="String" name="sexo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isCalmada" returnType="boolean" visibility="public"/>
+        <Method name="setCalmada" returnType="void" visibility="public">
+          <Argument type="boolean" name="calmada"/>
+        </Method>
+        <Method name="getUlulato" returnType="String" visibility="public"/>
+        <Method name="setUlulato" returnType="void" visibility="public">
+          <Argument type="String" name="ululato"/>
+        </Method>
+        <Method name="enojarse" returnType="void" visibility="public"/>
+        <Method name="calmarse" returnType="void" visibility="public"/>
+        <Method name="hacerRuido" returnType="void" visibility="public"/>
+        <Method name="sePuedeVacunar" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="LaSenoraDeLosGatos" visibility="public" xPosition="204.0" yPosition="382.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Mascotas" package="LaSenoraDeLosGatos" visibility="public" isAbstract="true" xPosition="386.0" yPosition="29.0">
+      <Fields>
+        <Field name="apodo" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="apodo"/>
+          <Argument type="String" name="sexo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getApodo" returnType="String" visibility="public"/>
+        <Method name="setApodo" returnType="void" visibility="public">
+          <Argument type="String" name="apodo"/>
+        </Method>
+        <Method name="getSexo" returnType="String" visibility="public"/>
+        <Method name="setSexo" returnType="void" visibility="public">
+          <Argument type="String" name="sexo"/>
+        </Method>
+        <Method name="hacerRuido" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="sePuedeVacunar" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="LaSenoraDeLosGatos" visibility="public" xPosition="319.0" yPosition="283.0">
+      <Fields>
+        <Field name="enfermoMoquillos" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="enfermoMoquillos"/>
+          <Argument type="boolean" name="garrapatas"/>
+          <Argument type="String" name="apodo"/>
+          <Argument type="String" name="sexo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isEnfermoMoquillos" returnType="boolean" visibility="public"/>
+        <Method name="setEnfermoMoquillos" returnType="void" visibility="public">
+          <Argument type="boolean" name="enfermoMoquillos"/>
+        </Method>
+        <Method name="isGarrapatas" returnType="boolean" visibility="public"/>
+        <Method name="setGarrapatas" returnType="void" visibility="public">
+          <Argument type="boolean" name="garrapatas"/>
+        </Method>
+        <Method name="hacerRuido" returnType="void" visibility="public"/>
+        <Method name="sePuedeVacunar" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Senora" package="LaSenoraDeLosGatos" visibility="public" xPosition="618.0" yPosition="29.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="mascotas" type="ArrayList&lt;Mascotas&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getMascotas" returnType="ArrayList&lt;Mascotas&gt;" visibility="public"/>
+        <Method name="setMascotas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Mascotas&gt;" name="mascotas"/>
+        </Method>
+        <Method name="adoptarMascota" returnType="void" visibility="public">
+          <Argument type="Mascotas" name="m"/>
+        </Method>
+        <Method name="mostrarMascotas" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="mascotas" source="LaSenoraDeLosGatos.Senora" target="LaSenoraDeLosGatos.Mascotas" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Mascotas&gt;"/>
+    <UseRelation source="LaSenoraDeLosGatos.Senora" target="LaSenoraDeLosGatos.Mascotas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="LaSenoraDeLosGatos.Gato" target="LaSenoraDeLosGatos.Mascotas"/>
+    <IsRelation name="is" source="LaSenoraDeLosGatos.Lechuza" target="LaSenoraDeLosGatos.Mascotas"/>
+    <IsRelation name="is" source="LaSenoraDeLosGatos.Perro" target="LaSenoraDeLosGatos.Mascotas"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
