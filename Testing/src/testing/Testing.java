@@ -15,6 +15,7 @@ public static Scanner leer=new Scanner(System.in).useDelimiter("\n");
         System.out.println("Ingrese una palabra:");
         palabra=leer.next();
         System.out.println(palabra);
+        System.out.println("Bien perfecto");
         
     
     }
