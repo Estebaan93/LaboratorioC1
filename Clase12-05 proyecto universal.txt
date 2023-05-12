@@ -1,0 +1,11 @@
+SELECT materia.*
+FROM materia join inscripcion on(materia.idMateria=inscripcion.idMateria)
+WHERE idAlumno=3
+
+
+/////
+SELECT *
+FROM materia
+WHERE idMateria not in (SELECT materia.idMateria
+						FROM materia join inscripcion on(materia.idMateria=inscripcion.idMateria)
+						WHERE idAlumno=3)
